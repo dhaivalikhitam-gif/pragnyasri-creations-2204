@@ -472,18 +472,18 @@ export default function App() {
   // Dynamic Lucide-react components mapper for services
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
-      case "Camera": return <Camera id="icon-camera" className="w-8 h-8 text-[#b8965a]" />;
-      case "Video": return <Video id="icon-video" className="w-8 h-8 text-[#b8965a]" />;
-      case "Film": return <Film id="icon-film" className="w-8 h-8 text-[#b8965a]" />;
-      case "Sparkles": return <Sparkles id="icon-sparkles" className="w-8 h-8 text-[#b8965a]" />;
-      case "Heart": return <Heart id="icon-heart" className="w-8 h-8 text-[#b8965a]" />;
-      case "Gift": return <Gift id="icon-gift" className="w-8 h-8 text-[#b8965a]" />;
-      default: return <Camera id="icon-default" className="w-8 h-8 text-[#b8965a]" />;
+      case "Camera": return <Camera id="icon-camera" className="w-8 h-8 text-[#a07840]" />;
+      case "Video": return <Video id="icon-video" className="w-8 h-8 text-[#a07840]" />;
+      case "Film": return <Film id="icon-film" className="w-8 h-8 text-[#a07840]" />;
+      case "Sparkles": return <Sparkles id="icon-sparkles" className="w-8 h-8 text-[#a07840]" />;
+      case "Heart": return <Heart id="icon-heart" className="w-8 h-8 text-[#a07840]" />;
+      case "Gift": return <Gift id="icon-gift" className="w-8 h-8 text-[#a07840]" />;
+      default: return <Camera id="icon-default" className="w-8 h-8 text-[#a07840]" />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#c8c3bb] font-sans selection:bg-[#b8965a] selection:text-[#080808] relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f8f6f3] text-[#1a1a1a] font-sans selection:bg-[#a07840] selection:text-white relative overflow-x-hidden">
       
       {/* 1. LUXURY PRELOADER */}
       <AnimatePresence>
@@ -492,7 +492,7 @@ export default function App() {
             id="preloader"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-            className="fixed inset-0 bg-[#0a0a0a] z-[9999] flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center pointer-events-auto"
           >
             <div className="text-center px-6">
               {/* Animated Monogram Symbol */}
@@ -500,10 +500,10 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="w-16 h-16 border border-[#b8965a] rounded-full mx-auto flex items-center justify-center mb-6 relative overflow-hidden"
+                className="w-16 h-16 border border-[#a07840] rounded-full mx-auto flex items-center justify-center mb-6 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#b8965a]/15 to-transparent animate-pulse" />
-                <span className="font-serif text-xl font-light text-[#b8965a]">P</span>
+                <span className="font-serif text-xl font-light text-[#a07840]">P</span>
                 <span className="font-serif text-sm font-light text-[#d4b483] -ml-0.5">S</span>
               </motion.div>
 
@@ -512,7 +512,7 @@ export default function App() {
                 initial={{ letterSpacing: "0.15em", opacity: 0 }}
                 animate={{ letterSpacing: "0.25em", opacity: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="font-serif text-xl md:text-2xl font-medium text-[#b8965a] tracking-[0.2em] uppercase mb-1"
+                className="font-serif text-xl md:text-2xl font-medium text-[#a07840] tracking-[0.2em] uppercase mb-1"
               >
                 PRAGNYA SRI
               </motion.h1>
@@ -531,7 +531,7 @@ export default function App() {
               </div>
 
               {/* Percent values */}
-              <span className="font-mono text-[10px] uppercase text-[#b8965a]/70 tracking-[0.15em] block">
+              <span className="font-mono text-[10px] uppercase text-[#a07840]/70 tracking-[0.15em] block">
                 {loadingProgress}% Loading Studio
               </span>
             </div>
@@ -546,9 +546,9 @@ export default function App() {
       >
         {/* Administrative Ribbon Bar */}
         {isAdmin && (
-          <div id="admin-bar" className="w-full bg-[#b8965a] text-[#080808] py-2 px-6 flex items-center justify-between text-[10px] font-sans font-bold tracking-wider relative z-[105] uppercase border-b border-[#080808]/20">
+          <div id="admin-bar" className="w-full bg-[#a07840] text-white py-2 px-6 flex items-center justify-between text-[10px] font-sans font-bold tracking-wider relative z-[105] uppercase border-b border-[#080808]/20">
             <div className="flex items-center gap-3">
-              <span className="bg-black text-[#b8965a] text-[9px] px-2 py-0.5 font-bold tracking-[0.15em] flex items-center gap-1">
+              <span className="bg-black text-[#a07840] text-[9px] px-2 py-0.5 font-bold tracking-[0.15em] flex items-center gap-1">
                 <Unlock className="w-3 h-3" />
                 <span>SESSION STATUS : ACTIVE</span>
               </span>
@@ -563,7 +563,7 @@ export default function App() {
                   setEditingWork(null);
                   setActiveModal("work");
                 }}
-                className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="hover:text-[#111111] transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Work</span>
@@ -571,7 +571,7 @@ export default function App() {
               <button
                 id="admin-settings-trigger"
                 onClick={() => setActiveModal("settings")}
-                className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="hover:text-[#111111] transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <SettingsIcon className="w-3.5 h-3.5" />
                 <span>Settings</span>
@@ -579,7 +579,7 @@ export default function App() {
               <button
                 id="admin-sync-trigger"
                 onClick={() => setActiveModal("sync")}
-                className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="hover:text-[#111111] transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Sync Cloud</span>
@@ -590,7 +590,7 @@ export default function App() {
                   handleSetIsAdmin(false);
                   triggerToast("Logged out successfully.");
                 }}
-                className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer border-l border-[#080808]/15 pl-4 sm:pl-6"
+                className="hover:text-[#111111] transition-colors flex items-center gap-1.5 cursor-pointer border-l border-[#080808]/15 pl-4 sm:pl-6"
               >
                 <LogOut className="w-3.5 h-3.5" />
                 <span>Exit</span>
@@ -602,7 +602,7 @@ export default function App() {
         {/* Real-time Glassmorphic visual container */}
         <div className={`transition-all duration-500 ${
           scrolled 
-            ? "backdrop-blur-md bg-[#0a0a0a]/90 py-3 border-b border-white/5" 
+            ? "backdrop-blur-md bg-[#f8f6f3]/90 py-3 border-b border-white/5" 
             : "bg-transparent py-6"
         }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
@@ -613,21 +613,21 @@ export default function App() {
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-2 sm:gap-3 cursor-pointer group min-w-0"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#b8965a] flex items-center justify-center relative bg-black overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-[#e8d5a3] shrink-0">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#a07840] flex items-center justify-center relative bg-black overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:border-[#e8d5a3] shrink-0">
                 {settings.heroLogoUrl ? (
                   <img src={settings.heroLogoUrl} alt="logo" className="w-full h-full object-cover" />
                 ) : (
                   <>
                     <div className="absolute inset-0 bg-radial-gradient-dark group-hover:opacity-80 transition-opacity" />
-                    <Camera className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#b8965a] group-hover:rotate-12 transition-transform duration-500" />
+                    <Camera className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#a07840] group-hover:rotate-12 transition-transform duration-500" />
                   </>
                 )}
               </div>
               <div className="min-w-0 select-none">
-                <span className="font-serif text-xs sm:text-sm font-semibold tracking-[0.12em] sm:tracking-[0.15em] text-[#b8965a] block leading-none truncate max-w-[130px] sm:max-w-none">
+                <span className="font-serif text-xs sm:text-sm font-semibold tracking-[0.12em] sm:tracking-[0.15em] text-[#a07840] block leading-none truncate max-w-[130px] sm:max-w-none">
                   {settings.name.split(" ").slice(0, 2).join(" ") || "PRAGNYA SRI"}
                 </span>
-                <span className="text-[8px] sm:text-[10px] font-sans tracking-[0.2em] sm:tracking-[0.2em] text-[#c8c3bb]/70 block mt-0.5 leading-none truncate max-w-[130px] sm:max-w-none">
+                <span className="text-[8px] sm:text-[10px] font-sans tracking-[0.2em] sm:tracking-[0.2em] text-[#1a1a1a]/70 block mt-0.5 leading-none truncate max-w-[130px] sm:max-w-none">
                   {settings.name.split(" ").slice(2).join(" ") || "CREATIONS"}
                 </span>
               </div>
@@ -639,10 +639,10 @@ export default function App() {
                 <button
                   key={link}
                   onClick={() => scrollToSection(link.toLowerCase())}
-                  className="text-xs font-medium uppercase tracking-[0.15em] text-[#c8c3bb]/70 hover:text-[#b8965a] transition-colors relative py-1 group"
+                  className="text-xs font-medium uppercase tracking-[0.15em] text-[#1a1a1a]/70 hover:text-[#a07840] transition-colors relative py-1 group"
                 >
                   {link}
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#b8965a] transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#a07840] transition-all duration-300 group-hover:w-full" />
                 </button>
               ))}
             </div>
@@ -652,7 +652,7 @@ export default function App() {
               <button
                 id="nav-book-btn"
                 onClick={() => setIsBookingOpen(true)}
-                className="px-6 py-2.5 bg-[#b8965a] text-[#080808] text-[10px] uppercase tracking-[0.2em] font-semibold transition-all duration-300 hover:bg-[#d4b483] hover:shadow-[0_0_15px_rgba(184,150,90,0.3)] shadow-[0_4px_10px_rgba(0,0,0,0.4)] cursor-pointer"
+                className="px-6 py-2.5 bg-[#a07840] text-[#080808] text-[10px] uppercase tracking-[0.2em] font-semibold transition-all duration-300 hover:bg-[#c9a86c] hover:shadow-[0_0_15px_rgba(184,150,90,0.3)] shadow-[0_4px_10px_rgba(0,0,0,0.4)] cursor-pointer"
               >
                 Book Now
               </button>
@@ -668,10 +668,10 @@ export default function App() {
                     setActiveModal("login");
                   }
                 }}
-                className="w-10 h-10 rounded-full border border-white/5 hover:border-[#b8965a]/70 flex items-center justify-center text-[#c8c3bb] hover:text-[#b8965a] transition-colors relative bg-black/30 cursor-pointer"
+                className="w-10 h-10 rounded-full border border-white/5 hover:border-[#a07840]/70 flex items-center justify-center text-[#1a1a1a] hover:text-[#a07840] transition-colors relative bg-black/30 cursor-pointer"
                 title={isAdmin ? "Log out Admin" : "Log in Admin"}
               >
-                {isAdmin ? <Unlock className="w-4 h-4 text-[#b8965a]" /> : <Lock className="w-4 h-4 text-[#b8965a]" />}
+                {isAdmin ? <Unlock className="w-4 h-4 text-[#a07840]" /> : <Lock className="w-4 h-4 text-[#a07840]" />}
               </button>
             </div>
 
@@ -687,7 +687,7 @@ export default function App() {
                     setActiveModal("login");
                   }
                 }}
-                className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-[#b8965a] cursor-pointer"
+                className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center text-[#a07840] cursor-pointer"
               >
                 {isAdmin ? <Unlock className="w-4.5 h-4.5" /> : <Lock className="w-4.5 h-4.5" />}
               </button>
@@ -695,7 +695,7 @@ export default function App() {
               <button
                 id="mobile-menu-trigger"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-[#c8c3bb] hover:text-[#b8965a] transition-colors p-2"
+                className="text-[#1a1a1a] hover:text-[#a07840] transition-colors p-2"
               >
                 <Menu className="w-6 h-6" />
               </button>
@@ -713,20 +713,20 @@ export default function App() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4 }}
-              className="md:hidden bg-[#111111]/95 border-b border-white/8 backdrop-blur-lg w-full absolute top-[100%] left-0"
+              className="md:hidden bg-white/95 border-b border-white/8 backdrop-blur-lg w-full absolute top-[100%] left-0"
             >
               <div className="px-6 py-8 flex flex-col gap-6 text-center">
                 {["Home", "Portfolio", "Services", "About", "Contact"].map((link) => (
                   <button
                     key={link}
                     onClick={() => scrollToSection(link.toLowerCase())}
-                    className="text-sm font-medium tracking-[0.15em] uppercase text-[#c8c3bb] hover:text-[#b8965a] transition-all block"
+                    className="text-sm font-medium tracking-[0.15em] uppercase text-[#1a1a1a] hover:text-[#a07840] transition-all block"
                   >
                     {link}
                   </button>
                 ))}
                 
-                <div className="h-[1px] bg-[#b8965a]/10 my-1" />
+                <div className="h-[1px] bg-[#a07840]/10 my-1" />
 
                 <button
                   id="mobile-book-btn"
@@ -734,7 +734,7 @@ export default function App() {
                     setMobileMenuOpen(false);
                     setIsBookingOpen(true);
                   }}
-                  className="w-full py-3 bg-[#b8965a] text-[#080808] text-xs font-semibold uppercase tracking-[0.15em] rounded-none"
+                  className="w-full py-3 bg-[#a07840] text-[#080808] text-xs font-semibold uppercase tracking-[0.15em] rounded-none"
                 >
                   Book Now
                 </button>
@@ -782,7 +782,7 @@ export default function App() {
           <div className="absolute top-28 left-6 z-20">
             <button
               onClick={() => setActiveModal("edit-intro")}
-              className="px-4 py-2 border border-[#b8965a] text-[#b8965a] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#b8965a] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 border border-[#a07840] text-[#a07840] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#a07840] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Edit className="w-3.5 h-3.5" />
               <span>Edit Intro Backdrop</span>
@@ -792,15 +792,15 @@ export default function App() {
 
         {/* Ambient Floating Dust particles overlay */}
         <div className="absolute inset-0 z-1 pointer-events-none opacity-40">
-          <div className="absolute top-[20%] left-[10%] w-1.5 h-1.5 rounded-full bg-[#b8965a]/70 blur-sm animate-pulse" />
+          <div className="absolute top-[20%] left-[10%] w-1.5 h-1.5 rounded-full bg-[#a07840]/70 blur-sm animate-pulse" />
           <div className="absolute top-[60%] left-[80%] w-2 h-2 rounded-full bg-[#e8d5a3]/50 blur-md animate-bounce" style={{ animationDuration: '8s' }} />
-          <div className="absolute bottom-[30%] left-[30%] w-1 h-1 rounded-full bg-[#b8965a]/80 blur-[1px] animate-pulse" style={{ animationDuration: '4s' }} />
+          <div className="absolute bottom-[30%] left-[30%] w-1 h-1 rounded-full bg-[#a07840]/80 blur-[1px] animate-pulse" style={{ animationDuration: '4s' }} />
         </div>
 
         {/* Main Content Container */}
         <div className="max-w-5xl mx-auto px-6 text-center z-10 relative mt-8">
           
-          <span className="font-serif text-[10px] tracking-[0.2em] text-[#b8965a] uppercase block mb-4 animate-pulse">
+          <span className="font-serif text-[10px] tracking-[0.2em] text-[#a07840] uppercase block mb-4 animate-pulse">
             {settings.heroEyebrow || "— A Fine Art Photography Studio —"}
           </span>
 
@@ -810,18 +810,18 @@ export default function App() {
               {/* Spinning outer rings */}
               <div className="absolute inset-0 border border-white/8 rounded-full animate-spin" style={{ animationDuration: '30s' }} />
               <div className="absolute inset-2 border border-dashed border-[#e8d5a3]/30 rounded-full animate-spin" style={{ animationDuration: '20s', animationDirection: 'reverse' }} />
-              <div className="absolute inset-4 border border-[#b8965a]/45 rounded-full animate-pulse" style={{ animationDuration: '3s' }} />
+              <div className="absolute inset-4 border border-[#a07840]/45 rounded-full animate-pulse" style={{ animationDuration: '3s' }} />
               
               {/* Floating inner core capsule */}
               <motion.div
                 animate={{ y: [0, -4, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="w-16 h-16 rounded-full bg-black/80 border border-[#b8965a] flex items-center justify-center shadow-[0_0_25px_rgba(184,150,90,0.3)] overflow-hidden"
+                className="w-16 h-16 rounded-full bg-black/80 border border-[#a07840] flex items-center justify-center shadow-[0_0_25px_rgba(184,150,90,0.3)] overflow-hidden"
               >
                 {settings.heroLogoUrl ? (
                   <img src={settings.heroLogoUrl} alt="Logo emblem overlay" className="w-full h-full object-cover" />
                 ) : (
-                  <Camera className="w-6 h-6 text-[#b8965a]" />
+                  <Camera className="w-6 h-6 text-[#a07840]" />
                 )}
               </motion.div>
             </div>
@@ -836,7 +836,7 @@ export default function App() {
           >
             <h1 className="font-serif font-light tracking-[0.12em] text-4xl sm:text-6xl md:text-7xl text-white uppercase leading-[1.05]">
               {settings.name.split(" ").slice(0, 2).join(" ") || "PRAGNYA SRI"} <br />
-              <span className="text-[#b8965a] tracking-[0.2em] font-light text-2xl sm:text-4xl md:text-5xl block mt-3">
+              <span className="text-[#a07840] tracking-[0.2em] font-light text-2xl sm:text-4xl md:text-5xl block mt-3">
                 {settings.name.split(" ").slice(2).join(" ") || "CREATIONS"}
               </span>
             </h1>
@@ -847,9 +847,9 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 1 }}
-            className="mt-6 font-serif text-lg md:text-xl text-[#c8c3bb]/90 tracking-wide max-w-2xl mx-auto italic"
+            className="mt-6 font-serif text-lg md:text-xl text-[#1a1a1a]/90 tracking-wide max-w-2xl mx-auto italic"
           >
-            <span className="text-[#b8965a] font-normal not-italic">★</span> {settings.tagline} <span className="text-[#b8965a] font-normal not-italic">★</span>
+            <span className="text-[#a07840] font-normal not-italic">★</span> {settings.tagline} <span className="text-[#a07840] font-normal not-italic">★</span>
           </motion.div>
 
           {/* Action triggers */}
@@ -862,14 +862,14 @@ export default function App() {
             <button
               id="hero-work-btn"
               onClick={() => scrollToSection("portfolio")}
-              className="w-56 sm:w-auto px-8 py-3.5 border border-[#b8965a] text-[#b8965a] text-xs font-normal uppercase tracking-[0.15em] hover:bg-[#b8965a] hover:text-[#080808] transition-all bg-black/40 cursor-pointer"
+              className="w-56 sm:w-auto px-8 py-3.5 border border-[#a07840] text-[#a07840] text-xs font-normal uppercase tracking-[0.15em] hover:bg-[#a07840] hover:text-[#080808] transition-all bg-black/40 cursor-pointer"
             >
               View Our Work
             </button>
             <button
               id="hero-book-btn"
               onClick={() => setIsBookingOpen(true)}
-              className="w-56 sm:w-auto px-8 py-3.5 bg-[#b8965a] text-[#080808] text-xs font-semibold uppercase tracking-[0.15em] hover:bg-[#d4b483] transition-colors cursor-pointer"
+              className="w-56 sm:w-auto px-8 py-3.5 bg-[#a07840] text-[#080808] text-xs font-semibold uppercase tracking-[0.15em] hover:bg-[#c9a86c] transition-colors cursor-pointer"
             >
               Book a Session
             </button>
@@ -884,11 +884,11 @@ export default function App() {
             onClick={() => scrollToSection("statistics")}
             className="flex flex-col items-center gap-2 cursor-pointer"
           >
-            <span className="font-sans text-[8px] uppercase tracking-[0.4em] text-[#b8965a]/70">
+            <span className="font-sans text-[8px] uppercase tracking-[0.4em] text-[#a07840]/70">
               Scroll
             </span>
-            <div className="w-5 h-8 rounded-full border border-[#b8965a]/60 p-1 flex justify-center">
-              <div className="w-1 h-2 bg-[#b8965a] rounded-full animate-ping" />
+            <div className="w-5 h-8 rounded-full border border-[#a07840]/60 p-1 flex justify-center">
+              <div className="w-1 h-2 bg-[#a07840] rounded-full animate-ping" />
             </div>
           </button>
         </div>
@@ -898,7 +898,7 @@ export default function App() {
       {/* 4. STATISTICS SECTION */}
       <section
         id="statistics"
-        className="bg-[#111111] border-y border-white/5 py-16 relative overflow-hidden"
+        className="bg-white border-y border-white/5 py-16 relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 relative z-10 text-center">
@@ -917,20 +917,20 @@ export default function App() {
                 {/* Accent mini corner decoration */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gradient-to-r from-transparent via-[#b8965a]/30 to-transparent scale-0 group-hover:scale-100 transition-all duration-500" />
                 
-                <h3 className="font-serif text-4xl md:text-5xl font-light text-[#b8965a] leading-tight flex items-end justify-center">
+                <h3 className="font-serif text-4xl md:text-5xl font-light text-[#a07840] leading-tight flex items-end justify-center">
                   <span>{stat.value}</span>
                 </h3>
                 
                 {/* Separator line under design criteria */}
-                <div className="w-6 h-[1px] bg-[#b8965a]/30 my-3" />
+                <div className="w-6 h-[1px] bg-[#a07840]/30 my-3" />
 
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-[#c8c3bb]/80 font-medium font-sans">
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-[#1a1a1a]/80 font-medium font-sans">
                   {stat.label}
                 </p>
 
                 {/* Vertical Separator for wide grids */}
                 {i < 3 && (
-                  <div className="hidden lg:block absolute -right-6 top-1/4 h-1/2 w-[1px] bg-[#b8965a]/15" />
+                  <div className="hidden lg:block absolute -right-6 top-1/4 h-1/2 w-[1px] bg-[#a07840]/15" />
                 )}
               </div>
             ))}
@@ -948,14 +948,14 @@ export default function App() {
           
           {/* Symmetrical Luxury Header */}
           <div className="text-center mb-16">
-            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
               Our Legacy
             </span>
-            <div className="h-[1px] w-12 bg-[#b8965a] mx-auto mb-4" />
-            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-white uppercase leading-tight">
+            <div className="h-[1px] w-12 bg-[#a07840] mx-auto mb-4" />
+            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-[#111111] uppercase leading-tight">
               PORTFOLIO
             </h2>
-            <p className="text-xs md:text-sm text-[#c8c3bb]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
+            <p className="text-xs md:text-sm text-[#1a1a1a]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
               Explore dynamic showcases of timeless stories curated with editorial elegance
             </p>
           </div>
@@ -980,8 +980,8 @@ export default function App() {
                 onClick={() => setActiveCategory(tab.id)}
                 className={`px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.18em] transition-all duration-300 ${
                   activeCategory === tab.id
-                    ? "text-[#080808] bg-[#b8965a] font-semibold"
-                    : "text-[#c8c3bb]/70 hover:text-[#b8965a]"
+                    ? "text-[#080808] bg-[#a07840] font-semibold"
+                    : "text-[#1a1a1a]/70 hover:text-[#a07840]"
                 }`}
               >
                 {tab.label}
@@ -1005,7 +1005,7 @@ export default function App() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   onClick={() => setSelectedWork(item)}
-                  className="break-inside-avoid relative overflow-hidden group cursor-pointer border border-zinc-900 bg-[#111111] shadow-2xl"
+                  className="break-inside-avoid relative overflow-hidden group cursor-pointer border border-zinc-900 bg-white shadow-2xl"
                 >
                   {/* Administrative edit and delete coordinates buttons overlay */}
                   {isAdmin && (
@@ -1015,7 +1015,7 @@ export default function App() {
                           setEditingWork(item);
                           setActiveModal("work");
                         }}
-                        className="p-2 bg-[#0a0a0a] border border-[#b8965a]/40 hover:border-[#b8965a] text-[#b8965a] hover:bg-[#b8965a] hover:text-[#080808] transition-all rounded-none cursor-pointer"
+                        className="p-2 bg-[#f8f6f3] border border-[#a07840]/40 hover:border-[#a07840] text-[#a07840] hover:bg-[#a07840] hover:text-[#080808] transition-all rounded-none cursor-pointer"
                         title="Edit Work"
                       >
                         <Edit className="w-3.5 h-3.5" />
@@ -1029,7 +1029,7 @@ export default function App() {
                             triggerToast(`Deleted "${item.title}"`);
                           }
                         }}
-                        className="p-2 bg-[#0a0a0a] border border-red-500/40 hover:border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all rounded-none cursor-pointer"
+                        className="p-2 bg-[#f8f6f3] border border-red-500/40 hover:border-red-500 text-red-500 hover:bg-red-500 hover:text-[#111111] transition-all rounded-none cursor-pointer"
                         title="Delete Work"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -1050,27 +1050,27 @@ export default function App() {
                     <div className="absolute inset-x-0 bottom-0 top-1/4 bg-gradient-to-t from-black via-black/40 to-transparent transition-opacity duration-500 opacity-80 group-hover:opacity-100" />
                     
                     {/* Golden thin border on active hover state */}
-                    <div className="absolute inset-0 border border-[#b8965a] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10 m-3" />
+                    <div className="absolute inset-0 border border-[#a07840] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10 m-3" />
                     
                     {/* Centered Golden Cinematic play node button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100 z-10">
-                      <div className="w-14 h-14 rounded-full bg-[#0a0a0a]/90 border border-[#b8965a] flex items-center justify-center text-[#b8965a] group-hover:shadow-[0_0_20px_rgba(184,150,90,0.5)] transition-shadow">
+                      <div className="w-14 h-14 rounded-full bg-[#f8f6f3]/90 border border-[#a07840] flex items-center justify-center text-[#a07840] group-hover:shadow-[0_0_20px_rgba(184,150,90,0.5)] transition-shadow">
                         <Play className="w-5 h-5 ml-1 fill-current" />
                       </div>
                     </div>
 
                     {/* Metadata text card slides upward on hover */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-left transition-transform duration-500 transform translate-y-2 group-hover:translate-y-0">
-                      <span className="font-serif text-[10px] uppercase tracking-[0.15em] text-[#b8965a] block mb-1">
+                      <span className="font-serif text-[10px] uppercase tracking-[0.15em] text-[#a07840] block mb-1">
                         {item.categoryLabel}
                       </span>
-                      <h3 className="font-serif text-lg md:text-xl font-light text-white tracking-wide uppercase leading-snug">
+                      <h3 className="font-serif text-lg md:text-xl font-light text-[#111111] tracking-wide uppercase leading-snug">
                         {item.title}
                       </h3>
                       
-                      <div className="h-[1px] bg-[#b8965a]/30 my-2 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                      <div className="h-[1px] bg-[#a07840]/30 my-2 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                       
-                      <p className="text-[10px] text-[#c8c3bb]/80 font-sans tracking-wide truncate max-w-full">
+                      <p className="text-[10px] text-[#1a1a1a]/80 font-sans tracking-wide truncate max-w-full">
                         {item.meta}
                       </p>
                     </div>
@@ -1084,7 +1084,7 @@ export default function App() {
           {/* Dynamic Empty filter handler */}
           {filteredWorks.length === 0 && (
             <div className="text-center py-20">
-              <span className="font-serif text-[#b8965a]/50 text-base">
+              <span className="font-serif text-[#a07840]/50 text-base">
                 No productions found in this category at this time.
               </span>
             </div>
@@ -1101,19 +1101,19 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#0a0a0a]/98 backdrop-blur-md z-[500] flex flex-col justify-between p-4 md:p-8"
+            className="fixed inset-0 bg-[#f8f6f3]/98 backdrop-blur-md z-[500] flex flex-col justify-between p-4 md:p-8"
           >
             {/* Top Close Control Panel */}
             <div className="flex items-center justify-between w-full p-4 relative z-[510]">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full border border-[#b8965a]/40 flex items-center justify-center">
-                  <Play className="w-3 h-3 text-[#b8965a]" />
+                <div className="w-8 h-8 rounded-full border border-[#a07840]/40 flex items-center justify-center">
+                  <Play className="w-3 h-3 text-[#a07840]" />
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase tracking-[0.15em] text-[#b8965a] font-sans block leading-none">
+                  <span className="text-[9px] uppercase tracking-[0.15em] text-[#a07840] font-sans block leading-none">
                     Currently Viewing Reel
                   </span>
-                  <span className="font-serif text-sm text-white block mt-1 tracking-wider">
+                  <span className="font-serif text-sm text-[#111111] block mt-1 tracking-wider">
                     {selectedWork.title}
                   </span>
                 </div>
@@ -1122,7 +1122,7 @@ export default function App() {
               <button
                 id="lightbox-close-btn"
                 onClick={() => setSelectedWork(null)}
-                className="w-12 h-12 rounded-full border border-white/10 hover:border-[#b8965a] flex items-center justify-center text-white hover:text-[#b8965a] transition-all bg-[#111111]"
+                className="w-12 h-12 rounded-full border border-white/10 hover:border-[#a07840] flex items-center justify-center text-[#111111] hover:text-[#a07840] transition-all bg-white"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -1130,7 +1130,7 @@ export default function App() {
 
             {/* Central Video Player / High-Definition display section */}
             <div className="flex-1 flex items-center justify-center px-4 max-w-5xl mx-auto w-full my-4">
-              <div className="w-full bg-[#0a0a0a] border border-white/5 shadow-[0_0_50px_rgba(184,150,90,0.15)] relative aspect-video">
+              <div className="w-full bg-[#f8f6f3] border border-white/5 shadow-[0_0_50px_rgba(184,150,90,0.15)] relative aspect-video">
                 
                 {/* Embedded Video Player Iframe simulator with cinematic settings */}
                 <iframe
@@ -1145,7 +1145,7 @@ export default function App() {
                 />
 
                 {/* Left vertical info pillar indicator */}
-                <div className="absolute top-4 left-4 z-20 hidden md:flex items-center gap-2 bg-black/60 border border-white/5 py-1 px-3 text-[9px] uppercase tracking-[0.15em] text-[#b8965a]">
+                <div className="absolute top-4 left-4 z-20 hidden md:flex items-center gap-2 bg-black/60 border border-white/5 py-1 px-3 text-[9px] uppercase tracking-[0.15em] text-[#a07840]">
                   <Info className="w-3 h-3" />
                   <span>Now Playing</span>
                 </div>
@@ -1155,10 +1155,10 @@ export default function App() {
 
             {/* Bottom details description toolbar */}
             <div className="max-w-4xl mx-auto w-full text-center pb-6 px-4">
-              <span className="text-[10px] py-1 px-3 bg-[#b8965a]/10 text-[#b8965a] border border-white/8 uppercase tracking-[0.2em] inline-block mb-3">
+              <span className="text-[10px] py-1 px-3 bg-[#a07840]/10 text-[#a07840] border border-white/8 uppercase tracking-[0.2em] inline-block mb-3">
                 {selectedWork.categoryLabel}
               </span>
-              <p className="text-xs text-[#c8c3bb]/80 font-sans tracking-wide max-w-2xl mx-auto">
+              <p className="text-xs text-[#1a1a1a]/80 font-sans tracking-wide max-w-2xl mx-auto">
                 {selectedWork.meta} — Developed exclusively in 4K DCI master rendering formats with Pragnya Sri Creations design standard.
               </p>
               
@@ -1169,7 +1169,7 @@ export default function App() {
                     navigateWhatsApp(`Hi Pragnya Sri Creations! I just viewed your spectacular portfolio reel "${selectedWork.title}" and would like to inquire about similar packages!`);
                     setSelectedWork(null);
                   }}
-                  className="px-6 py-2.5 bg-[#b8965a] text-[#080808] text-[9px] uppercase tracking-[0.15em] font-semibold hover:bg-[#d4b483] transition-colors"
+                  className="px-6 py-2.5 bg-[#a07840] text-[#080808] text-[9px] uppercase tracking-[0.15em] font-semibold hover:bg-[#c9a86c] transition-colors"
                 >
                   Inquire About This Format
                 </button>
@@ -1183,20 +1183,20 @@ export default function App() {
       {/* 6. SERVICES SECTION */}
       <section
         id="services"
-        className="py-24 md:py-32 bg-[#111111] border-y border-white/5 relative relative"
+        className="py-24 md:py-32 bg-white border-y border-white/5 relative relative"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           
           {/* Symmetrical Header */}
           <div className="text-center mb-20">
-            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
               Our Craft
             </span>
-            <div className="h-[1px] w-12 bg-[#b8965a] mx-auto mb-4" />
-            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-white uppercase leading-tight">
+            <div className="h-[1px] w-12 bg-[#a07840] mx-auto mb-4" />
+            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-[#111111] uppercase leading-tight">
               SERVICES
             </h2>
-            <p className="text-xs md:text-sm text-[#c8c3bb]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
+            <p className="text-xs md:text-sm text-[#1a1a1a]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
               Impeccable execution, premium technology, and deep cinematic devotion
             </p>
           </div>
@@ -1218,7 +1218,7 @@ export default function App() {
                 <div
                   key={srv.id || idx}
                   id={`service-box-${srv.id || idx}`}
-                  className="bg-[#0a0a0a] border border-zinc-900 p-8 md:p-10 relative overflow-hidden group transition-all duration-500 hover:border-[#b8965a]/30 hover:shadow-[0_10px_35px_rgba(184,150,90,0.06)]"
+                  className="bg-[#f8f6f3] border border-zinc-900 p-8 md:p-10 relative overflow-hidden group transition-all duration-500 hover:border-[#a07840]/30 hover:shadow-[0_10px_35px_rgba(184,150,90,0.06)]"
                 >
                   {/* Top scaling gold indicator bar */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#b8965a] to-[#d4b483] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
@@ -1230,27 +1230,27 @@ export default function App() {
   
                   {/* Service Icons and Title */}
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="w-14 h-14 bg-[#111111] rounded-none border border-zinc-900 group-hover:border-[#b8965a]/30 flex items-center justify-center transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(184,150,90,0.2)] text-2xl">
+                    <div className="w-14 h-14 bg-white rounded-none border border-zinc-900 group-hover:border-[#a07840]/30 flex items-center justify-center transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(184,150,90,0.2)] text-2xl">
                       {srv.icon || "📸"}
                     </div>
-                    <span className="font-mono text-[10px] tracking-[0.15em] text-[#b8965a]/50">
+                    <span className="font-mono text-[10px] tracking-[0.15em] text-[#a07840]/50">
                       0{idx + 1} // CINEMA
                     </span>
                   </div>
   
-                  <h3 className="font-serif text-xl font-normal text-white tracking-wide uppercase mb-4">
+                  <h3 className="font-serif text-xl font-normal text-[#111111] tracking-wide uppercase mb-4">
                     {srv.title}
                   </h3>
   
-                  <p className="text-xs text-[#c8c3bb]/70 mb-8 font-sans leading-relaxed tracking-wide min-h-[50px]">
+                  <p className="text-xs text-[#1a1a1a]/70 mb-8 font-sans leading-relaxed tracking-wide min-h-[50px]">
                     {srv.desc}
                   </p>
   
                   {/* High contrast interactive checklist */}
                   <ul className="space-y-2.5 border-t border-zinc-900/80 pt-6">
                     {srvDetails.map((dt, idx2) => (
-                      <li key={idx2} className="flex items-center gap-2.5 text-[11px] text-[#c8c3bb]/90 font-sans tracking-wide">
-                        <div className="w-1 h-1 rounded-full bg-[#b8965a]" />
+                      <li key={idx2} className="flex items-center gap-2.5 text-[11px] text-[#1a1a1a]/90 font-sans tracking-wide">
+                        <div className="w-1 h-1 rounded-full bg-[#a07840]" />
                         <span>{dt}</span>
                       </li>
                     ))}
@@ -1263,7 +1263,7 @@ export default function App() {
                         setIsBookingOpen(true);
                         setBookingService(srv.title);
                       }}
-                      className="text-[10px] uppercase tracking-[0.15em] font-semibold text-[#b8965a] hover:text-[#d4b483] flex items-center gap-1.5 transition-colors group/btn cursor-pointer bg-transparent border-none"
+                      className="text-[10px] uppercase tracking-[0.15em] font-semibold text-[#a07840] hover:text-[#d4b483] flex items-center gap-1.5 transition-colors group/btn cursor-pointer bg-transparent border-none"
                     >
                       <span>Inquire Capacity</span>
                       <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
@@ -1288,7 +1288,7 @@ export default function App() {
           <div className="absolute top-8 left-6 z-20">
             <button
               onClick={() => setActiveModal("edit-story")}
-              className="px-4 py-2 border border-[#b8965a] text-[#b8965a] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#b8965a] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 border border-[#a07840] text-[#a07840] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#a07840] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Edit className="w-3.5 h-3.5" />
               <span>Edit Studio Story</span>
@@ -1307,7 +1307,7 @@ export default function App() {
                 className="relative mx-auto max-w-sm lg:max-w-none"
               >
                 {/* Floating golden offset outline frames */}
-                <div className="absolute -inset-4 border border-[#b8965a] opacity-40 transform translate-x-3 translate-y-3 pointer-events-none z-0" />
+                <div className="absolute -inset-4 border border-[#a07840] opacity-40 transform translate-x-3 translate-y-3 pointer-events-none z-0" />
                 
                 {/* Central imagery block */}
                 <div className="relative z-10 border border-zinc-800 p-2 bg-black shadow-2xl">
@@ -1319,11 +1319,11 @@ export default function App() {
                   />
                   
                   {/* Subtle caption bottom pillar overlay */}
-                  <div className="absolute bottom-6 left-6 right-6 bg-[#0a0a0a]/90 backdrop-blur-sm border border-white/8 p-4">
-                    <span className="font-serif text-xs text-[#b8965a] block uppercase tracking-wide">
+                  <div className="absolute bottom-6 left-6 right-6 bg-[#f8f6f3]/90 backdrop-blur-sm border border-white/8 p-4">
+                    <span className="font-serif text-xs text-[#a07840] block uppercase tracking-wide">
                       {settings.sig}
                     </span>
-                    <span className="text-[9px] text-[#c8c3bb]/60 uppercase tracking-[0.15em] font-sans mt-0.5 block">
+                    <span className="text-[9px] text-[#1a1a1a]/60 uppercase tracking-[0.15em] font-sans mt-0.5 block">
                       {settings.aboutSigLabel}
                     </span>
                   </div>
@@ -1337,17 +1337,17 @@ export default function App() {
 
             {/* Split layout RIGHT: Premium Storytelling Text */}
             <div className="lg:col-span-7 text-left">
-              <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+              <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
                 Our Philosophy
               </span>
-              <div className="h-[1px] w-12 bg-[#b8965a] mb-6" />
+              <div className="h-[1px] w-12 bg-[#a07840] mb-6" />
               
-              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white uppercase mb-8 leading-tight">
-                {settings.aboutHeading.split(" ").slice(0, 1).join(" ") || "Timeless"} <span className="italic text-[#b8965a] font-medium font-serif">{settings.aboutHeading.split(" ").slice(1, 2).join(" ") || "Memories"}</span> <br /> 
+              <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-[#111111] uppercase mb-8 leading-tight">
+                {settings.aboutHeading.split(" ").slice(0, 1).join(" ") || "Timeless"} <span className="italic text-[#a07840] font-medium font-serif">{settings.aboutHeading.split(" ").slice(1, 2).join(" ") || "Memories"}</span> <br /> 
                 {settings.aboutHeading.split(" ").slice(2).join(" ") || "& Magical Reels"}
               </h2>
 
-              <div className="space-y-6 text-sm text-[#c8c3bb]/85 font-sans leading-relaxed">
+              <div className="space-y-6 text-sm text-[#1a1a1a]/85 font-sans leading-relaxed">
                 <p>
                   {settings.about1}
                 </p>
@@ -1359,15 +1359,15 @@ export default function App() {
               {/* Founder's digital elegant signature and gold touch */}
               <div className="mt-10 pt-8 border-t border-zinc-900 flex items-center justify-between">
                 <div>
-                  <p className="font-serif text-2xl text-[#b8965a] italic font-light tracking-wider">
+                  <p className="font-serif text-2xl text-[#a07840] italic font-light tracking-wider">
                     {settings.name}
                   </p>
-                  <span className="text-[10px] uppercase tracking-[0.15em] text-[#c8c3bb]/50 block mt-1">
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-[#1a1a1a]/50 block mt-1">
                     Cine-Aesthetics Laboratory
                   </span>
                 </div>
                 <div className="w-16 h-12 flex items-center justify-center opacity-30">
-                  <span className="font-serif text-3xl italic font-serif text-[#b8965a]">Est. 2018</span>
+                  <span className="font-serif text-3xl italic font-serif text-[#a07840]">Est. 2018</span>
                 </div>
               </div>
 
@@ -1381,20 +1381,20 @@ export default function App() {
       {/* 8. TESTIMONIALS SECTION */}
       <section
         id="testimonials"
-        className="py-24 md:py-32 bg-[#111111] border-y border-white/5 relative relative"
+        className="py-24 md:py-32 bg-white border-y border-white/5 relative relative"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           
           {/* Symmetrical Header */}
           <div className="text-center mb-20">
-            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
               Endorsements
             </span>
-            <div className="h-[1px] w-12 bg-[#b8965a] mx-auto mb-4" />
-            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-white uppercase leading-tight">
+            <div className="h-[1px] w-12 bg-[#a07840] mx-auto mb-4" />
+            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-[#111111] uppercase leading-tight">
               TESTIMONIALS
             </h2>
-            <p className="text-xs md:text-sm text-[#c8c3bb]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
+            <p className="text-xs md:text-sm text-[#1a1a1a]/70 font-sans tracking-wider max-w-xl mx-auto mt-2 italic">
               A testament to our devotion shared by our prominent, happy client families
             </p>
           </div>
@@ -1405,10 +1405,10 @@ export default function App() {
               <div
                 key={t.id}
                 id={`testimonial-card-${t.id}`}
-                className="bg-[#0a0a0a] border border-zinc-900 p-8 flex flex-col justify-between relative group hover:border-white/8 transition-all duration-300"
+                className="bg-[#f8f6f3] border border-zinc-900 p-8 flex flex-col justify-between relative group hover:border-white/8 transition-all duration-300"
               >
                 {/* Accent giant gold quote decorator inside frame */}
-                <span className="absolute top-4 right-6 font-serif text-7xl text-[#b8965a]/10 select-none pointer-events-none group-hover:text-[#b8965a]/15 transition-colors">
+                <span className="absolute top-4 right-6 font-serif text-7xl text-[#a07840]/10 select-none pointer-events-none group-hover:text-[#a07840]/15 transition-colors">
                   “
                 </span>
 
@@ -1425,7 +1425,7 @@ export default function App() {
                           triggerToast(`Removed review of ${t.name}`);
                         }
                       }}
-                      className="p-1 px-2 border border-red-500/30 text-red-500 hover:bg-red-500 hover:text-white transition-all text-[9.5px] font-sans bg-black/85 cursor-pointer rounded-none"
+                      className="p-1 px-2 border border-red-500/30 text-red-500 hover:bg-red-500 hover:text-[#111111] transition-all text-[9.5px] font-sans bg-black/85 cursor-pointer rounded-none"
                       title="Delete Review"
                     >
                       Delete Review
@@ -1437,18 +1437,18 @@ export default function App() {
                   {/* Gold Star rating indicator vector */}
                   <div className="flex items-center gap-1 mb-5">
                     {[...Array(t.stars)].map((_, idx) => (
-                      <Star key={idx} className="w-4.5 h-4.5 text-[#b8965a] fill-current" />
+                      <Star key={idx} className="w-4.5 h-4.5 text-[#a07840] fill-current" />
                     ))}
                   </div>
 
-                  <p className="text-xs text-[#c8c3bb]/80 leading-relaxed font-sans italic mb-8 min-h-[90px]">
+                  <p className="text-xs text-[#1a1a1a]/80 leading-relaxed font-sans italic mb-8 min-h-[90px]">
                     "{t.text}"
                   </p>
                 </div>
 
                 {/* Customer client image circle avatar */}
                 <div className="flex items-center gap-4 pt-6 border-t border-zinc-900">
-                  <div className="w-12 h-12 rounded-full border border-[#b8965a] p-0.5 overflow-hidden">
+                  <div className="w-12 h-12 rounded-full border border-[#a07840] p-0.5 overflow-hidden">
                     <img
                       src={t.image || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300"}
                       alt={t.name}
@@ -1457,10 +1457,10 @@ export default function App() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-serif text-sm font-medium text-white tracking-wide">
+                    <h4 className="font-serif text-sm font-medium text-[#111111] tracking-wide">
                       {t.name}
                     </h4>
-                    <span className="text-[10px] text-[#b8965a]/80 uppercase tracking-[0.15em] font-sans font-medium mt-0.5 block">
+                    <span className="text-[10px] text-[#a07840]/80 uppercase tracking-[0.15em] font-sans font-medium mt-0.5 block">
                       {t.event}
                     </span>
                   </div>
@@ -1483,7 +1483,7 @@ export default function App() {
           <div className="absolute top-8 left-6 z-20">
             <button
               onClick={() => setActiveModal("edit-gallery")}
-              className="px-4 py-2 border border-[#b8965a] text-[#b8965a] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#b8965a] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 border border-[#a07840] text-[#a07840] text-[10px] uppercase font-bold tracking-[0.15em] bg-black/85 hover:bg-[#a07840] hover:text-[#080808] transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Edit className="w-3.5 h-3.5" />
               <span>Edit Instagram Gallery</span>
@@ -1495,18 +1495,18 @@ export default function App() {
           
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+            <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
               {settings.instaSubtext ? settings.instaSubtext : "Follow Our Chronicle"}
             </span>
-            <div className="h-[1px] w-12 bg-[#b8965a] mx-auto mb-4" />
-            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-white uppercase leading-tight">
+            <div className="h-[1px] w-12 bg-[#a07840] mx-auto mb-4" />
+            <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.06em] text-[#111111] uppercase leading-tight">
               @{settings.instaHandle || "PRAGNYASRI_CREATIONS"}
             </h2>
             
             <button
               id="instagram-follow-btn"
               onClick={() => window.open(settings.instagram, "_blank")}
-              className="mt-6 px-6 py-2 border border-[#b8965a] text-[#b8965a] text-[10px] uppercase font-semibold tracking-[0.15em] hover:bg-[#b8965a] hover:text-[#080808] transition-all bg-black/40 cursor-pointer"
+              className="mt-6 px-6 py-2 border border-[#a07840] text-[#a07840] text-[10px] uppercase font-semibold tracking-[0.15em] hover:bg-[#a07840] hover:text-[#080808] transition-all bg-black/40 cursor-pointer"
             >
               Follow Studio Feed
             </button>
@@ -1532,8 +1532,8 @@ export default function App() {
 
                 {/* Dark sliding hover overlay showing stats */}
                 <div className="absolute inset-0 bg-black/75 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Instagram className="w-6 h-6 text-[#b8965a] mb-2 scale-75 group-hover:scale-100 transition-transform" />
-                  <div className="text-white text-[11px] tracking-wider font-mono flex items-center gap-3">
+                  <Instagram className="w-6 h-6 text-[#a07840] mb-2 scale-75 group-hover:scale-100 transition-transform" />
+                  <div className="text-[#111111] text-[11px] tracking-wider font-mono flex items-center gap-3">
                     <span>♥ {Math.floor(400 - idx * 25)}+</span>
                     <span>✉ {Math.floor(20 - idx * 2)}+</span>
                   </div>
@@ -1551,28 +1551,28 @@ export default function App() {
       {/* 10. CONTACT SECTION (Let's Work Together) */}
       <section
         id="contact"
-        className="py-24 md:py-32 bg-[#111111] border-t border-white/5 relative relative"
+        className="py-24 md:py-32 bg-white border-t border-white/5 relative relative"
       >
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           
           {/* Symmetrical Header Logo Ball */}
           <div className="flex justify-center mb-8">
-            <div className="w-14 h-14 rounded-full border border-[#b8965a]/30 flex items-center justify-center p-0.5 animate-pulse bg-black">
-              <div className="w-full h-full rounded-full border border-[#b8965a] flex items-center justify-center">
-                <Camera className="w-5 h-5 text-[#b8965a]" />
+            <div className="w-14 h-14 rounded-full border border-[#a07840]/30 flex items-center justify-center p-0.5 animate-pulse bg-black">
+              <div className="w-full h-full rounded-full border border-[#a07840] flex items-center justify-center">
+                <Camera className="w-5 h-5 text-[#a07840]" />
               </div>
             </div>
           </div>
 
-          <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#b8965a] block mb-2">
+          <span className="font-serif text-[11px] font-light uppercase tracking-[0.4em] text-[#a07840] block mb-2">
             Initiate Conversation
           </span>
-          <div className="h-[1px] w-12 bg-[#b8965a] mx-auto mb-6" />
+          <div className="h-[1px] w-12 bg-[#a07840] mx-auto mb-6" />
 
-          <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-white uppercase mb-4 leading-normal">
+          <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-[#111111] uppercase mb-4 leading-normal">
             LET'S WORK TOGETHER
           </h2>
-          <p className="text-xs md:text-sm text-[#c8c3bb]/70 max-w-xl mx-auto mb-16 leading-relaxed">
+          <p className="text-xs md:text-sm text-[#1a1a1a]/70 max-w-xl mx-auto mb-16 leading-relaxed">
             Reach out via our luxury interactive contact team member desk or submit the reservation inquiry wire. We would love to capture your masterpiece.
           </p>
 
@@ -1594,36 +1594,36 @@ export default function App() {
                 title: "Voice Call", 
                 detail: settings.phone, 
                 action: () => window.open(`tel:${settings.phone.replace(/\s+/g, "")}`, "_self"), 
-                icon: <Phone className="w-5 h-5 text-[#b8965a]" /> 
+                icon: <Phone className="w-5 h-5 text-[#a07840]" /> 
               },
               { 
                 id: "email-trigger",
                 title: "Email Studio", 
                 detail: settings.email, 
                 action: () => window.open(`mailto:${settings.email}?subject=Studio Photography Inquiry`, "_self"), 
-                icon: <Mail className="w-5 h-5 text-[#b8965a]" /> 
+                icon: <Mail className="w-5 h-5 text-[#a07840]" /> 
               },
               { 
                 id: "share-trigger",
                 title: "Share Link", 
                 detail: "Copy Portfolio URL", 
                 action: triggerCopy, 
-                icon: <Share2 className="w-5 h-5 text-[#b8965a]" /> 
+                icon: <Share2 className="w-5 h-5 text-[#a07840]" /> 
               }
             ].map((box, idx) => (
               <div
                 key={idx}
                 id={box.id}
                 onClick={box.action}
-                className="bg-[#0a0a0a] border border-zinc-900 hover:border-[#b8965a]/30 p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-[1.02] group"
+                className="bg-[#f8f6f3] border border-zinc-900 hover:border-[#a07840]/30 p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-[1.02] group"
               >
-                <div className="w-10 h-10 rounded-full border border-white/8 group-hover:border-[#b8965a]/55 flex items-center justify-center mb-4 transition-colors">
+                <div className="w-10 h-10 rounded-full border border-white/8 group-hover:border-[#a07840]/55 flex items-center justify-center mb-4 transition-colors">
                   {box.icon}
                 </div>
-                <h4 className="font-serif text-sm text-white font-medium group-hover:text-[#b8965a] transition-colors leading-none mb-1.5">
+                <h4 className="font-serif text-sm text-[#111111] font-medium group-hover:text-[#a07840] transition-colors leading-none mb-1.5">
                   {box.title}
                 </h4>
-                <p className="text-[9px] text-[#c8c3bb]/50 uppercase tracking-[0.15em] text-center truncate max-w-full leading-none mt-1">
+                <p className="text-[9px] text-[#1a1a1a]/50 uppercase tracking-[0.15em] text-center truncate max-w-full leading-none mt-1">
                   {box.detail}
                 </p>
               </div>
@@ -1631,14 +1631,14 @@ export default function App() {
           </div>
 
           {/* Symmetrical Luxury Interactive Reservation Wire Form */}
-          <div className="max-w-2xl mx-auto bg-[#0a0a0a] border border-zinc-900 p-8 sm:p-12 text-left relative overflow-hidden">
+          <div className="max-w-2xl mx-auto bg-[#f8f6f3] border border-zinc-900 p-8 sm:p-12 text-left relative overflow-hidden">
             {/* Corner accent vectors */}
-            <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#b8965a]" />
-            <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#b8965a]" />
-            <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#b8965a]" />
-            <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#b8965a]" />
+            <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#a07840]" />
+            <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#a07840]" />
+            <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#a07840]" />
+            <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#a07840]" />
 
-            <h3 className="font-serif text-lg text-white font-light tracking-[0.15em] uppercase mb-8 border-b border-white/5 pb-4">
+            <h3 className="font-serif text-lg text-[#111111] font-light tracking-[0.15em] uppercase mb-8 border-b border-white/5 pb-4">
               RESERVATION INQUIRY WIRE
             </h3>
 
@@ -1646,7 +1646,7 @@ export default function App() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#b8965a]">
+                  <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#a07840]">
                     YOUR FULL NAME *
                   </label>
                   <input
@@ -1655,12 +1655,12 @@ export default function App() {
                     value={contactName}
                     onChange={(e) => setContactName(e.target.value)}
                     placeholder="Enter your name"
-                    className="bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
+                    className="bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
                   />
                 </div>
                 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#b8965a]">
+                  <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#a07840]">
                     EMAIL ADDRESS *
                   </label>
                   <input
@@ -1669,13 +1669,13 @@ export default function App() {
                     value={contactEmail}
                     onChange={(e) => setContactEmail(e.target.value)}
                     placeholder="name@domain.com"
-                    className="bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
+                    className="bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#b8965a]">
+                <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#a07840]">
                   PHONE NUMBER
                 </label>
                 <input
@@ -1683,12 +1683,12 @@ export default function App() {
                   value={contactPhone}
                   onChange={(e) => setContactPhone(e.target.value)}
                   placeholder="+91 XXXXX XXXXX"
-                  className="bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
+                  className="bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-4 py-3 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#b8965a]">
+                <label className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#a07840]">
                   EVENT DETAILS & SPECIAL REQUESTS *
                 </label>
                 <textarea
@@ -1697,7 +1697,7 @@ export default function App() {
                   value={contactMsg}
                   onChange={(e) => setContactMsg(e.target.value)}
                   placeholder="Describe your event date, location, and creative ideas..."
-                  className="bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs p-4 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full resize-none"
+                  className="bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs p-4 placeholder:text-zinc-600 focus:outline-none transition-colors rounded-none w-full resize-none"
                 />
               </div>
 
@@ -1706,7 +1706,7 @@ export default function App() {
                 type="submit"
                 id="contact-form-submit"
                 disabled={formSubmitted}
-                className="w-full py-4 bg-[#b8965a] hover:bg-[#d4b483] text-[#080808] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
+                className="w-full py-4 bg-[#a07840] hover:bg-[#c9a86c] text-[#080808] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
               >
                 {formSubmitted ? (
                   <>
@@ -1727,28 +1727,28 @@ export default function App() {
       {/* 11. FOOTER */}
       <footer
         id="footer"
-        className="bg-[#0a0a0a] border-t border-white/5 py-16 text-center"
+        className="bg-[#f8f6f3] border-t border-white/5 py-16 text-center"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           {/* Logo element with gold formatting */}
           <div className="flex justify-center mb-6">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-              <div className="w-12 h-12 rounded-full border border-[#b8965a] flex items-center justify-center bg-black">
-                <Camera className="w-5 h-5 text-[#b8965a]" />
+              <div className="w-12 h-12 rounded-full border border-[#a07840] flex items-center justify-center bg-black">
+                <Camera className="w-5 h-5 text-[#a07840]" />
               </div>
               <div className="text-left">
-                <span className="font-serif text-lg font-medium tracking-[0.15em] text-[#b8965a] block leading-none">
+                <span className="font-serif text-lg font-medium tracking-[0.15em] text-[#a07840] block leading-none">
                   {settings.name.split(" ").slice(0, 2).join(" ") || "PRAGNYA SRI"}
                 </span>
-                <span className="text-[11px] font-sans tracking-[0.2em] text-[#c8c3bb]/60 block mt-1 leading-none">
+                <span className="text-[11px] font-sans tracking-[0.2em] text-[#1a1a1a]/60 block mt-1 leading-none">
                   {settings.name.split(" ").slice(2).join(" ") || "CREATIONS"}
                 </span>
               </div>
             </div>
           </div>
 
-          <p className="font-serif text-sm text-[#c8c3bb]/70 italic tracking-wider max-w-sm mx-auto mb-8">
+          <p className="font-serif text-sm text-[#1a1a1a]/70 italic tracking-wider max-w-sm mx-auto mb-8">
             "{settings.tagline || "Capturing Memories, Creating Magic"}"
           </p>
 
@@ -1758,7 +1758,7 @@ export default function App() {
               <button
                 key={link}
                 onClick={() => scrollToSection(link.toLowerCase())}
-                className="text-[#c8c3bb]/70 hover:text-[#b8965a] transition-colors font-medium cursor-pointer"
+                className="text-[#1a1a1a]/70 hover:text-[#a07840] transition-colors font-medium cursor-pointer"
               >
                 {link}
               </button>
@@ -1781,7 +1781,7 @@ export default function App() {
                 href={soc.path}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full border border-zinc-800 hover:border-[#b8965a] flex items-center justify-center text-[#c8c3bb]/60 hover:text-[#b8965a] transition-all"
+                className="w-10 h-10 rounded-full border border-zinc-800 hover:border-[#a07840] flex items-center justify-center text-[#1a1a1a]/60 hover:text-[#a07840] transition-all"
               >
                 {soc.icon}
               </a>
@@ -1793,7 +1793,7 @@ export default function App() {
           {/* Copyright statement */}
           <p className="text-[10px] font-mono text-zinc-600 tracking-[0.15em]">
             © {new Date().getFullYear()} PRAGNYA SRI CREATIONS • ALL RIGHTS RESERVED. <br />
-            <span className="text-[9px] text-[#b8965a]/30 mt-1 block">ESTABLISHED IN HYDERABAD • ELITE CINEMATOGRAPHY LAB</span>
+            <span className="text-[9px] text-[#a07840]/30 mt-1 block">ESTABLISHED IN HYDERABAD • ELITE CINEMATOGRAPHY LAB</span>
           </p>
 
         </div>
@@ -1818,35 +1818,35 @@ export default function App() {
               initial={{ scale: 0.95, y: 15, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 15, opacity: 0 }}
-              className="bg-[#0a0a0a] border border-[#b8965a]/30 max-w-md w-full relative z-[610] p-8 md:p-10 shadow-[0_0_50px_rgba(184,150,90,0.2)] text-left"
+              className="bg-[#f8f6f3] border border-[#a07840]/30 max-w-md w-full relative z-[610] p-8 md:p-10 shadow-[0_0_50px_rgba(184,150,90,0.2)] text-left"
             >
               {/* Close Button */}
               <button
                 id="booking-close-btn"
                 onClick={() => setIsBookingOpen(false)}
-                className="absolute top-4 right-4 w-8 h-8 rounded-full border border-white/5 hover:border-[#b8965a] flex items-center justify-center text-[#c8c3bb] hover:text-[#b8965a] transition-colors"
+                className="absolute top-4 right-4 w-8 h-8 rounded-full border border-white/5 hover:border-[#a07840] flex items-center justify-center text-[#1a1a1a] hover:text-[#a07840] transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
 
               <div className="mb-6">
-                <span className="text-[9px] uppercase tracking-[0.2em] text-[#b8965a] block mb-1">
+                <span className="text-[9px] uppercase tracking-[0.2em] text-[#a07840] block mb-1">
                   Private Session Intake
                 </span>
-                <h3 className="font-serif text-2xl text-white font-light tracking-wider uppercase leading-none">
+                <h3 className="font-serif text-2xl text-[#111111] font-light tracking-wider uppercase leading-none">
                   CONCIERGE DESK
                 </h3>
-                <div className="h-[2px] w-12 bg-[#b8965a] mt-3" />
+                <div className="h-[2px] w-12 bg-[#a07840] mt-3" />
               </div>
 
-              <p className="text-[11px] text-[#c8c3bb]/70 mb-6 font-sans leading-relaxed">
+              <p className="text-[11px] text-[#1a1a1a]/70 mb-6 font-sans leading-relaxed">
                 Connect directly with our Hyderabad reservation coordinator. Submitting this form compiles details and launches direct secure routing via WhatsApp.
               </p>
 
               <form onSubmit={handleBookingSubmit} className="space-y-4">
                 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] tracking-[0.15em] text-[#b8965a] font-sans">
+                  <label className="text-[9px] tracking-[0.15em] text-[#a07840] font-sans">
                     YOUR NAME *
                   </label>
                   <input
@@ -1855,12 +1855,12 @@ export default function App() {
                     value={bookingName}
                     onChange={(e) => setBookingName(e.target.value)}
                     placeholder="Enter your name"
-                    className="w-full bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-3.5 py-2.5 placeholder:text-zinc-650 focus:outline-none rounded-none"
+                    className="w-full bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-3.5 py-2.5 placeholder:text-zinc-650 focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] tracking-[0.15em] text-[#b8965a] font-sans">
+                  <label className="text-[9px] tracking-[0.15em] text-[#a07840] font-sans">
                     TELEPHONE NUMBER *
                   </label>
                   <input
@@ -1869,19 +1869,19 @@ export default function App() {
                     value={bookingPhone}
                     onChange={(e) => setBookingPhone(e.target.value)}
                     placeholder="+91 Mobile number"
-                    className="w-full bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-3.5 py-2.5 placeholder:text-zinc-650 focus:outline-none rounded-none"
+                    className="w-full bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-3.5 py-2.5 placeholder:text-zinc-650 focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] tracking-[0.15em] text-[#b8965a] font-sans">
+                  <label className="text-[9px] tracking-[0.15em] text-[#a07840] font-sans">
                     SELECT SERVICE *
                   </label>
                   <select
                     required
                     value={bookingService}
                     onChange={(e) => setBookingService(e.target.value)}
-                    className="w-full bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-3.5 py-2.5 focus:outline-none rounded-none appearance-none"
+                    className="w-full bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-3.5 py-2.5 focus:outline-none rounded-none appearance-none"
                   >
                     <option value="">Select a visual format...</option>
                     <option value="Photography Portfolio">Photography Portfolio</option>
@@ -1895,21 +1895,21 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] tracking-[0.15em] text-[#b8965a] font-sans">
+                  <label className="text-[9px] tracking-[0.15em] text-[#a07840] font-sans">
                     PREFERRED SESSION DATE
                   </label>
                   <input
                     type="date"
                     value={bookingDate}
                     onChange={(e) => setBookingDate(e.target.value)}
-                    className="w-full bg-[#111111] border border-zinc-800 focus:border-[#b8965a] text-[#c8c3bb] text-xs px-3.5 py-2.5 focus:outline-none rounded-none"
+                    className="w-full bg-white border border-zinc-800 focus:border-[#a07840] text-[#1a1a1a] text-xs px-3.5 py-2.5 focus:outline-none rounded-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   id="booking-submit-btn"
-                  className="w-full py-3 bg-[#b8965a] hover:bg-[#d4b483] text-[#080808] font-bold text-[10px] uppercase tracking-[0.15em] transition-colors mt-6 flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 bg-[#a07840] hover:bg-[#c9a86c] text-[#080808] font-bold text-[10px] uppercase tracking-[0.15em] transition-colors mt-6 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Connect WhatsApp Session</span>
                 </button>
@@ -1928,22 +1928,22 @@ export default function App() {
             initial={{ opacity: 0, x: 50, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 50, scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-[400] bg-black border border-[#b8965a] p-4 shadow-[0_10px_30px_rgba(184,150,90,0.25)] flex items-center gap-3.5 max-w-sm"
+            className="fixed bottom-6 right-6 z-[400] bg-black border border-[#a07840] p-4 shadow-[0_10px_30px_rgba(184,150,90,0.25)] flex items-center gap-3.5 max-w-sm"
           >
-            <div className="w-8 h-8 rounded-full border border-[#b8965a]/30 flex items-center justify-center shrink-0">
-              <Camera className="w-3.5 h-3.5 text-[#b8965a] animate-pulse" />
+            <div className="w-8 h-8 rounded-full border border-[#a07840]/30 flex items-center justify-center shrink-0">
+              <Camera className="w-3.5 h-3.5 text-[#a07840] animate-pulse" />
             </div>
             <div>
-              <span className="text-[9px] uppercase tracking-[0.15em] text-[#b8965a] block font-semibold leading-none">
+              <span className="text-[9px] uppercase tracking-[0.15em] text-[#a07840] block font-semibold leading-none">
                 Live Studio Event
               </span>
-              <p className="text-[11px] text-white font-sans mt-1 leading-normal tracking-wide">
+              <p className="text-[11px] text-[#111111] font-sans mt-1 leading-normal tracking-wide">
                 {notification}
               </p>
             </div>
             <button 
               onClick={() => setNotification("")}
-              className="text-white hover:text-[#b8965a] p-1 self-start"
+              className="text-[#111111] hover:text-[#a07840] p-1 self-start"
             >
               <X className="w-3 h-3" />
             </button>
@@ -1959,12 +1959,12 @@ export default function App() {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
-            className="fixed top-24 left-1/2 -translate-x-1/2 z-[1000] bg-zinc-950 border border-[#b8965a] py-3.5 px-6 shadow-2xl backdrop-blur-md flex items-center gap-3"
+            className="fixed top-24 left-1/2 -translate-x-1/2 z-[1000] bg-zinc-950 border border-[#a07840] py-3.5 px-6 shadow-2xl backdrop-blur-md flex items-center gap-3"
           >
-            <div className="w-5 h-5 rounded-full bg-[#b8965a] flex items-center justify-center">
+            <div className="w-5 h-5 rounded-full bg-[#a07840] flex items-center justify-center">
               <Check className="w-3 h-3 text-[#080808]" />
             </div>
-            <span className="text-xs font-sans text-white tracking-wide">
+            <span className="text-xs font-sans text-[#111111] tracking-wide">
               {toastMessage}
             </span>
           </motion.div>
@@ -2010,7 +2010,7 @@ export default function App() {
               <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.646 4.828 1.776 6.858L2 30l7.338-1.742A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.834-1.594l-.418-.248-4.332 1.03.978-4.21-.27-.432A11.463 11.463 0 0 1 4.5 16C4.5 9.596 9.596 4.5 16 4.5S27.5 9.596 27.5 16 22.404 27.5 16 27.5zm6.29-8.674c-.344-.172-2.036-1.004-2.352-1.118-.316-.114-.546-.172-.776.172-.23.344-.89 1.118-1.09 1.348-.2.23-.4.258-.744.086-.344-.172-1.452-.536-2.766-1.706-1.022-.912-1.712-2.036-1.912-2.38-.2-.344-.022-.53.15-.7.154-.154.344-.402.516-.602.172-.2.23-.344.344-.574.114-.23.058-.43-.028-.602-.086-.172-.776-1.87-1.064-2.562-.28-.672-.564-.58-.776-.59-.2-.01-.43-.012-.66-.012-.23 0-.602.086-.918.43-.316.344-1.204 1.176-1.204 2.868s1.232 3.326 1.404 3.556c.172.23 2.426 3.706 5.878 5.196.822.354 1.464.566 1.964.724.824.262 1.574.224 2.168.136.66-.098 2.036-.832 2.322-1.636.286-.804.286-1.492.2-1.636-.084-.144-.314-.23-.658-.402z"/>
             </svg>
           </div>
-          <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+          <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-black text-[#111111] text-xs px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
             Chat on WhatsApp
           </span>
         </div>
@@ -2024,7 +2024,7 @@ export default function App() {
 function MessageSquareIcon() {
   return (
     <svg 
-      className="w-5 h-5 text-[#b8965a]" 
+      className="w-5 h-5 text-[#a07840]" 
       viewBox="0 0 24 24" 
       fill="none" 
       stroke="currentColor" 
@@ -2092,7 +2092,7 @@ Answer questions about services, pricing (say "please contact us for pricing"), 
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-24 left-6 z-[999] w-14 h-14 rounded-full bg-[#b8965a] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+        className="fixed bottom-24 left-6 z-[999] w-14 h-14 rounded-full bg-[#a07840] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
         aria-label="Chat with us"
       >
         {open ? (
@@ -2103,9 +2103,9 @@ Answer questions about services, pricing (say "please contact us for pricing"), 
       </button>
 
       {open && (
-        <div className="fixed bottom-44 left-6 z-[999] w-80 bg-zinc-950 border border-[#b8965a]/40 rounded-2xl shadow-2xl flex flex-col overflow-hidden" style={{ maxHeight: "420px" }}>
-          <div className="bg-[#b8965a] px-4 py-3 flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-[#b8965a] font-bold text-sm">P</div>
+        <div className="fixed bottom-44 left-6 z-[999] w-80 bg-zinc-950 border border-[#a07840]/40 rounded-2xl shadow-2xl flex flex-col overflow-hidden" style={{ maxHeight: "420px" }}>
+          <div className="bg-[#a07840] px-4 py-3 flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-[#a07840] font-bold text-sm">P</div>
             <div>
               <p className="text-black font-semibold text-sm">{settings.name}</p>
               <p className="text-black/70 text-xs">AI Assistant • Online</p>
@@ -2115,14 +2115,14 @@ Answer questions about services, pricing (say "please contact us for pricing"), 
           <div className="flex-1 overflow-y-auto p-3 space-y-2" style={{ maxHeight: "280px" }}>
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[85%] px-3 py-2 rounded-xl text-xs leading-relaxed ${m.role === "user" ? "bg-[#b8965a] text-black" : "bg-zinc-800 text-white"}`}>
+                <div className={`max-w-[85%] px-3 py-2 rounded-xl text-xs leading-relaxed ${m.role === "user" ? "bg-[#a07840] text-black" : "bg-zinc-800 text-[#111111]"}`}>
                   {m.text}
                 </div>
               </div>
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-zinc-800 px-3 py-2 rounded-xl text-xs text-white">Typing...</div>
+                <div className="bg-zinc-800 px-3 py-2 rounded-xl text-xs text-[#111111]">Typing...</div>
               </div>
             )}
             <div ref={bottomRef} />
@@ -2130,7 +2130,7 @@ Answer questions about services, pricing (say "please contact us for pricing"), 
 
           <div className="border-t border-zinc-800 p-2 flex gap-2">
             <input
-              className="flex-1 bg-zinc-900 text-white text-xs px-3 py-2 rounded-lg outline-none border border-zinc-700 focus:border-[#b8965a]"
+              className="flex-1 bg-zinc-900 text-[#111111] text-xs px-3 py-2 rounded-lg outline-none border border-zinc-700 focus:border-[#a07840]"
               placeholder="Type your message..."
               value={input}
               onChange={e => setInput(e.target.value)}
@@ -2138,7 +2138,7 @@ Answer questions about services, pricing (say "please contact us for pricing"), 
             />
             <button
               onClick={sendMessage}
-              className="bg-[#b8965a] text-black px-3 py-2 rounded-lg text-xs font-semibold hover:bg-[#b8974f] transition-colors"
+              className="bg-[#a07840] text-black px-3 py-2 rounded-lg text-xs font-semibold hover:bg-[#b8974f] transition-colors"
             >
               Send
             </button>
